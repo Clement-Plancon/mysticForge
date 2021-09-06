@@ -1,0 +1,748 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    text-transform: uppercase;
+    font-family: "GODOFWAR";
+    
+}
+
+p,
+button,
+a
+{
+    font-family: "Poppins";
+}
+/*--NAVBAR--*/
+
+.navbar
+{
+height: 100px;
+width: 100%;
+display: flex;
+align-items: center;
+}
+
+.navbar .container
+{
+width: 900px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+.navbar .container a
+{
+color: white;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 1em;
+font-weight: 500;
+}
+
+.navbar .container a:hover
+{
+color: #fec675;
+text-shadow: 0px 0px 10px white;
+}
+
+@media (max-width: 700px)
+{
+    .navbar .container a
+    {
+        font-size: 0.65em;
+    }
+
+    .navbar .container img
+    {
+        width: 50px;
+    }
+}
+
+/*--SECTION 1--*/
+
+body
+{
+    background-color:#1d1e31;
+}
+
+.sec1
+{
+    margin-top: 50px;
+}
+
+.sec1 .container
+{
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.sec1 .container .left h1
+{
+    font-size: 8em;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+
+.sec1 .container .left p
+{
+    color: #888888;
+    max-width:600px;
+    font-family: "Poppins";
+    font-weight: bold;
+    margin : 30px 0px;
+}
+
+.sec1 .container .left button
+{
+    width: 300px;
+    height: 65px;
+    border-radius: 15px;
+    border: none;
+    color: #2c2534;
+    font-size: 1em;
+    font-weight: 900;
+    background-color: #fec675;
+    box-shadow: 0px 0px 10px #fec675;
+    letter-spacing: 2px;
+    text-transform: uppercase;  
+}
+
+
+.sec1 .container .right
+{
+    position: relative;
+}
+
+.sec1 .container .right img
+{
+    position: relative;
+    z-index: -999;
+}
+
+.sec1 .container .right::before
+{   
+    content: url(img/rock-floating.png);
+    position: absolute;
+    top: 40%;
+    left: 13%;
+    animation: bounce 5s infinite ease-in-out;
+    animation-delay: 1s;
+}
+
+.sec1 .container .right::after
+{   
+    content: url(img/rock-floating.png);
+    position: absolute;
+    bottom: 11%;
+    right: 15%;
+    animation: bounce 5s infinite ease-in-out;
+    animation-delay: 2s;
+}
+
+@keyframes bounce
+{
+/*------------ */
+0%
+{
+    transform: translateY(0px);
+}
+/*------------ */
+50%
+{
+    transform: translateY(-30px);
+}
+/*------------ */
+100%
+{
+    transform: translateY(0px);
+}
+/*------------ */
+}
+
+@media (max-width: 1500px)
+{
+    .sec1 .container .left h1
+    {
+        font-size: 6em;
+    }
+}
+
+@media (max-width: 1300px)
+{
+    .sec1 .container
+    {
+        flex-direction: column;
+    }
+
+    .sec1 .left
+    {
+        display : flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sec1 .right
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sec1 .right img
+    {
+        margin-top: 50px;
+        width: 90%;
+    }
+
+
+}
+
+@media (max-width: 650px)
+{
+    .sec1 .container .left h1
+    {
+        font-size: 6em;
+    }
+
+    .sec1 .container .left p
+    {
+        margin: 40px 35px; 
+    }
+}
+
+@media (max-width: 600px)
+{
+    .sec1 .container .left h1
+    {
+        font-size: 5em;
+    }
+    .sec1 .container .left p
+    {
+        margin: 40px 10px; 
+    }
+
+}
+
+/*--SECTION 2--*/
+
+.sec2
+{
+    margin: 90px 0px 90px 0px;
+}
+
+.sec2 .container
+{
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.sec2 .big-card
+{
+width: 95%;
+margin: 0 auto;
+background-color:#353448;
+border-radius: 10px;
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+align-items: center;
+box-shadow: 0px 0px 20px 10px #fec675;
+animation: shadow 3s infinite ease-in-out;
+}
+
+.sec2 .big-card .arrow::before
+{
+content: "\f078";
+font-family: "FontAwesome";
+position: absolute;
+width: 60px;
+height: 60px;
+border-radius: 50px;
+background-color: #fec675;
+bottom: 0;
+left: 50%;
+transform: translate(-50%, 50%);
+display: flex;
+justify-content: center;
+align-items: center;
+color: black;
+}
+
+.sec2 .big-card .left
+{
+margin-right: 80px;
+}
+
+.sec2 .big-card .left img
+{
+top: -60px;
+position: relative;
+}
+
+.sec2 .big-card .right
+{
+max-width: 500px;
+}
+
+.sec2 .big-card h1
+{
+color: white;
+font-size: 5em;
+margin-bottom:30px ;
+}
+
+.sec2 .big-card h4
+{
+color: #fec675;
+letter-spacing: 2px;
+}
+
+.sec2 .big-card p
+{
+color: #b1b1b1;
+line-break: anywhere;
+}
+
+@media (max-width: 1190px)
+{
+    .sec2 .big-card .right
+    {
+        margin-bottom: 30px;
+    }
+    
+    .sec2 .big-card .left
+    {
+        margin-right: 0;
+    }
+
+}
+
+@media (max-width: 600px)
+{
+    .sec2 .big-card .right
+    {
+        text-align: center;
+        margin-bottom: 50px;       
+    }
+
+    .sec2 .big-card .right h1
+    {
+        font-size: 2.8em;     
+    }
+
+    .sec2 .big-card .right p
+    {
+        margin: 0 30px;     
+    }
+
+    .sec2 .big-card img
+    {
+        width: 100%;
+    }
+
+
+}
+
+@keyframes shadow
+{
+/*------------ */
+0%
+{
+    box-shadow: 0px 0px 45px 30px #fec675;
+    transform: translateY(0px);
+}
+/*------------ */
+20%
+{
+    box-shadow: 0px 0px 45px 0px #fec675;
+}
+/*------------ */
+40%
+{
+    box-shadow: 0px 0px 45px 15px #fec675;  
+}
+/*------------ */
+50%
+{
+    transform: translateY(-30px);
+}
+/*------------ */
+70%
+{
+    box-shadow: 0px 0px 45px -10px #efc675;
+}
+/*------------ */
+100%
+{
+    box-shadow: 0px 0px 45px 30px #fec675;
+    transform: translateY(0px);
+}
+/*------------ */
+}
+
+@keyframes shadow2
+{
+/*------------ */
+0%
+{
+    box-shadow: 0px 0px 45px 30px #fec675;
+}
+/*------------ */
+20%
+{
+    box-shadow: 0px 0px 45px 0px #fec675;
+}
+/*------------ */
+40%
+{
+    box-shadow: 0px 0px 45px 15px #fec675;  
+}
+/*------------ */
+70%
+{
+    box-shadow: 0px 0px 45px -10px #efc675;
+}
+/*------------ */
+100%
+{
+    box-shadow: 0px 0px 45px 30px #fec675;
+}
+/*------------ */
+}
+
+/*--SECTION 3--*/
+
+.sec3
+{
+    z-index: 99;
+    overflow: hidden;
+    background-image: url(img/bg.png);
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec3 img.pique_down
+{
+filter: drop-shadow(0px 5px 10px rgba(254, 198, 117, 0.75));
+}
+
+.sec3 img.pique_up
+{
+filter: drop-shadow(0px -5px 10px rgba(254, 198, 117, 0.75));
+}
+
+.sec3 .title h4
+{
+color:  #fec675;
+font-size: 1.5em;
+}
+
+.sec3 .title h1
+{
+color: white;
+font-size: 4em;
+}
+
+.sec3 .container
+{
+display: flex;
+flex-flow: row;
+max-width: 1500px;
+margin: 0 auto;
+}
+
+.sec3 .container .left
+{
+text-align: right;
+max-width: 320px;
+}
+
+.sec3 .container .right
+{
+max-width: 320px;
+}
+
+.sec3 .container .left,
+.sec3 .container .right
+{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+.sec3 .container h2
+{
+color: #fec675;
+margin-bottom: 20px;
+}
+
+.sec3 .container p
+{
+color: white;
+}
+
+@media (max-width: 1050px)
+{
+    .sec3 .mid
+    {
+        display: none;
+    }
+    .sec3 .container
+    {
+        flex-direction: column;
+    }
+
+    .sec3 .container .left,
+    .sec3 .container .right
+    {
+        max-width: 600px;
+        margin: 0 30px;
+    }
+
+    .sec3 .title,
+    .sec3 .container p,
+    .sec3 .container h2
+    {
+        text-align: center;
+    }
+
+    .sec3 .top,
+    .sec3 .bottom
+    {
+        margin-bottom: 30px 0;
+    }
+
+    .sec3 .top p,
+    .sec3 .bottom p
+    {
+        margin-bottom: 20px;
+    }
+    
+
+}
+
+@media (max-width: 550px)
+{
+
+    .sec3 .title h1
+    {
+        font-size: 3em;
+    }
+
+}
+
+/*--SECTION 4--*/
+
+.sec4 .center
+{
+    display: flex;
+    justify-content: center;
+}
+
+.sec4 .title h4
+{
+    color:  #fec675;
+    font-size: 1.5em;
+}
+
+.sec4 .title h1
+{
+    color: white;
+    font-size: 4em;
+}
+
+.sec4 .container
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.sec4 .card
+{
+    height: 550px;
+    width: 400px;
+    background-color:#353448 ;
+    border-radius: 15px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.sec4 .card .top
+{
+    background: linear-gradient(to top, #f12711, #f5a515);
+    position: relative;
+    height: 275px;
+}
+
+.sec4 .card .bottom
+{
+    margin: 0 20px;
+}
+
+.sec4 .card .description
+{
+    line-break: anywhere;
+    text-align: center;
+    margin-top: 50px;
+    font-family: "poppins";
+    color: #b1b1b1;
+}
+
+.sec4 .card h1
+{
+    color: white;
+    font-size: 2em;
+}
+
+.sec4 .card h4
+{
+    color:#fec675;
+    font-weight: bold;
+    font-size: 1.5;
+}
+
+.sec4 .card:nth-child(1) .bottom
+{
+    position: relative;
+    top: -70px;
+}
+
+.sec4 .card:nth-child(2) .bottom
+{
+    text-align: center;
+    position: relative;
+    top: 130px;
+}
+
+.sec4 .card:nth-child(3) .bottom
+{
+    position: relative;
+    top: -70px;
+}
+
+.sec4 .card:nth-child(1) h4,
+.sec4 .card:nth-child(1) h1
+{
+    text-align: right;
+}
+
+.sec4 .card:nth-child(1) .top
+{
+    transform: skew(0deg, -25deg);
+    top: -100px;
+}
+
+.sec4 .card:nth-child(2) .top
+{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.sec4 .card:nth-child(3) .top
+{
+    transform: skew(0deg, 25deg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    top: -100px;
+}
+
+
+.sec4 .card:nth-child(1) img
+{
+    position: relative;
+    transform: skew(0deg, 25deg);
+    left: 5px;
+    top: 70px;
+}
+
+.sec4 .card:nth-child(2) img
+{
+    position: relative;
+    top: 10px;
+}
+
+
+.sec4 .card:nth-child(3) img
+{
+    position: relative;
+    transform: skew(0deg, -25deg);
+    right: 10px;
+    top: 100px;
+}
+
+/*--FOOTER--*/
+
+footer
+{
+    margin-top: 100px;
+    min-height: 300px;
+    background-color: #353448;
+    display: flex;
+    align-items: center;
+}
+
+footer .container
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 1500px;
+    margin: 0 auto;
+
+}
+
+footer .container .left
+{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+
+footer .container .right
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px 20px;
+}
+
+footer .container h1
+{
+    color: #fec675;
+    margin-bottom: 20px;
+}
+
+footer .container p,
+footer .container a
+{
+    color: white;
+    text-decoration: none;
+}
